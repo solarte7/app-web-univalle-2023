@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    
+    <h1 id='cabecera'>Ejemplo DOM con JavaScript</h1>
+    <p id='parrafo'>Saludos!</p>
+   
+    <div id="div1">
+        <br/>
+    </div>
+
+    <script>
+        let parrafo = document.getElementById('parrafo').innerHTML;
+
+        document.getElementById('div1').innerHTML = parrafo + "--> Saludos desde JS";
+        
+    </script>
+
+    
+</body>
+</html>

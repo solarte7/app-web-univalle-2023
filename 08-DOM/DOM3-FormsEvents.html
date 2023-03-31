@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Formulario con JavaScript</title>
+</head>
+<body>
+    <form id='miFormulario'>
+        Nombre: <input type="text" name='nombre' value='Juan'/>
+        <br/>
+        Apellido: <input type='text' name='apellido' value='Perez'/>
+        <br/>
+    </form>
+    
+    <button onclick='mostrarValores()'>Mostrar</button>
+    <button onclick='borrarValores()'>Borrar</button>
+    
+    <div id='divValores'></div>
+
+    <script>
+        function mostrarValores(){
+            let form = document.forms['miFormulario'];
+            let texto = '';
+            let nombre = form['nombre'];
+            let apellido = form['apellido'];
+            texto = nombre.value + '<br/>' + apellido.value;
+            document.getElementById('divValores').innerHTML = texto;
+        }
+
+
+        function borrarValores(){
+            document.getElementById('divValores').innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>
